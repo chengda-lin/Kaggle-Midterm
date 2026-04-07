@@ -50,5 +50,5 @@ The predicted score distribution reflects the real-world skew of Amazon data, wh
 3. The script will generate `submission.csv` and a distribution plot.
 
 ---
-**Author**: Darren Lin (darrenlin2003)  
+**Author**: Chengda Lin (darrenlin2003)  
 **Date**: April 6, 2026

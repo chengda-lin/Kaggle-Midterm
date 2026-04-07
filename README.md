@@ -23,8 +23,6 @@ We combine massive textual data with numerical metadata to provide a comprehensi
     * **Averages**: The smoothed user and product scores from Stage 1.
 * **Scaling**: We use `MinMaxScaler` to ensure all numerical features are non-negative, which is a requirement for the Naive Bayes component of our ensemble.
 
-
-
 ### Stage 3: Triple-Model Ensemble
 Instead of a single algorithm, we use a weighted ensemble to balance different mathematical approaches:
 1.  **SGDClassifier (55%)**: A linear model optimized for large-scale sparse text data using `log_loss`.
@@ -37,7 +35,9 @@ Standard rounding is often suboptimal for the QWK metric. We treat the ensemble'
 ## 3. Results
 The predicted score distribution reflects the real-world skew of Amazon data, where 4 and 5-star reviews significantly outnumber lower scores.
 
+![Score Distribution](./score_distribution.png)
 
+*The bar chart above visualizes the final prediction counts across the 1-5 score range.*
 
 ## 4. How to Run
 ### Prerequisites
@@ -48,3 +48,7 @@ The predicted score distribution reflects the real-world skew of Amazon data, wh
 1. Ensure `train.csv`, `test.csv`, and `sample.csv` are in the project root.
 2. Open and run all cells in `kaggle.ipynb`.
 3. The script will generate `submission.csv` and a distribution plot.
+
+---
+**Author**: Darren Lin (darrenlin2003)  
+**Date**: April 6, 2026
